@@ -10,7 +10,7 @@ DS2411	KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-getID	KEYWORD2
+GetID	KEYWORD2
 GetMAC	KEYWORD2
 Init	KEYWORD2
 GetChar	KEYWORD2
