@@ -15,5 +15,4 @@ class DS2411
 		 uint8_t DataID[8];
 		 uint8_t DataIDR[8];
 };
-
 #endif //DS2411_H
