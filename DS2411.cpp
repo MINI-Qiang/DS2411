@@ -42,7 +42,7 @@ void DS2411::GetMAC(byte *DataMAC)
 
 void DS2411::GetCharAll(char *StrNumber)
 {
-	String tempStrNumber;
+	
 	for (byte a = 0; a < 8; a++)
 	{
 		if(DataIDR[a] <= 0x0F)   // 如果字符小于16 则需要补0
@@ -57,12 +57,12 @@ void DS2411::GetCharAll(char *StrNumber)
 	}
 	byte macStrLine =  tempStrNumber.length();  //获取字符串长度
 	tempStrNumber.getBytes((unsigned char*)StrNumber, macStrLine+1);  //转换标题名
+	tempStrNumber = "";
 }
 
 
 void DS2411::GetChar(char *StrNumber)
 {
-	String tempStrNumber;
 	for (byte a = 1; a < 7; a++)   //MAC 需要掐头去尾，取中间6字节
 	{
 		if(DataIDR[a] <= 0x0F)   // 如果字符小于16 则需要补0
@@ -77,4 +77,5 @@ void DS2411::GetChar(char *StrNumber)
 	}
 	byte macStrLine =  tempStrNumber.length();  //获取字符串长度
 	tempStrNumber.getBytes((unsigned char*)StrNumber, macStrLine+1);  //转换标题名
+	tempStrNumber = "";
 }

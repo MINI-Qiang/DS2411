@@ -14,5 +14,6 @@ class DS2411
 		 uint8_t _IOpin;
 		 uint8_t DataID[8];
 		 uint8_t DataIDR[8];
+		 String tempStrNumber;
 };
 #endif //DS2411_H
