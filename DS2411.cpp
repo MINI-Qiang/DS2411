@@ -36,6 +36,7 @@ void DS2411::GetMAC(byte *DataMAC)
 		{
 			*(DataMAC + i) = DataIDR[i+1];
 		}
+	DataMAC[0] =bitWrite(DataMAC[0], 0, 0);   //按照mac要求将mac地址的第一个字节的第一个bit 改为0
 }
 
 //
